@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Простой трекер задач</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Простой трекер задач</h1>
+  </header>
+
+  <main class="container">
+    <form id="add-form" class="add-form">
+      <input
+        type="text"
+        id="title-input"
+        placeholder="Название новой задачи"
+        autocomplete="off"
+      >
+      <select id="priority-select">
+        <option value="low">Низкий приоритет</option>
+        <option value="medium" selected>Средний приоритет</option>
+        <option value="high">Высокий приоритет</option>
+      </select>
+      <button type="submit">Добавить</button>
+    </form>
+
+    <div class="toolbar">
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="active">Активные</button>
+        <button class="filter-btn" data-filter="done">Выполненные</button>
+      </div>
+      <div class="counter" id="counter">Осталось задач: 0</div>
+    </div>
+
+    <ul id="task-list" class="task-list"></ul>
+  </main>
+
+  <footer class="footer">
+    <p>Учебный проект для практической работы по тестированию ПО.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
